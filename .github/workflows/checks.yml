@@ -17,10 +17,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Image
-        run: docker-compose build
+        run: docker compose build
 
       - name: Test
-        run: docker-compose run --rm app "python manage.py test"
+        run: docker compose run --rm app sh -c "python manage.py test"
 
       - name: Lint 
-        run: docker-compose run --rm app "flake8"
+        run: docker compose run --rm app sh -c "flake8"
