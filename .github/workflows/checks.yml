@@ -5,7 +5,7 @@ on: [push]
 jobs:
   test-lint:
     name: Test and lint
-    runs-on: ubuntu-latest  # Updated to latest Ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4  # Upgraded from v2
